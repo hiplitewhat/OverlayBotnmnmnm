@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_bg"
+    android:fillViewport="true">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- ═══ Header ═══ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="12dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/app_name"
+            android:textSize="28sp"
+            android:textColor="@color/neon_cyan"
+            android:textStyle="bold"
+            android:shadowColor="@color/neon_cyan"
+            android:shadowRadius="8" />
+
+        <TextView
+            android:id="@+id/status_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OFF"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:background="@color/alert_red"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp" />
+    </LinearLayout>
+
+    <!-- ═══ Stats row ═══ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@color/card_bg"
+            android:padding="8dp"
+            android:layout_marginEnd="3dp">
+
+            <TextView android:id="@+id/stat_shows"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0" android:textSize="22sp"
+                android:textStyle="bold" android:textColor="@color/neon_cyan" />
+
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AIRING" android:textSize="9sp"
+                android:textColor="@color/gray_500" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@color/card_bg"
+            android:padding="8dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp">
+
+            <TextView android:id="@+id/stat_watching"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0" android:textSize="22sp"
+                android:textStyle="bold" android:textColor="@color/sakura_pink" />
+
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WATCHING" android:textSize="9sp"
+                android:textColor="@color/gray_500" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@color/card_bg"
+            android:padding="8dp"
+            android:layout_marginStart="3dp">
+
+            <TextView android:id="@+id/stat_alerts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0" android:textSize="22sp"
+                android:textStyle="bold" android:textColor="@color/accent_gold" />
+
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ALERTS" android:textSize="9sp"
+                android:textColor="@color/gray_500" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Fetch info -->
+    <TextView android:id="@+id/fetch_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="" android:textSize="11sp"
+        android:textColor="@color/gray_500"
+        android:layout_marginBottom="10dp" />
+
+    <!-- ═══ Login + Control buttons ═══ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="6dp">
+
+        <Button android:id="@+id/btn_login"
+            android:layout_width="0dp" android:layout_height="40dp"
+            android:layout_weight="1" android:text="LOGIN"
+            android:textSize="12sp" android:textColor="@color/black"
+            android:backgroundTint="@color/sakura_pink"
+            android:layout_marginEnd="3dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp">
+
+        <Button android:id="@+id/btn_start"
+            android:layout_width="0dp" android:layout_height="40dp"
+            android:layout_weight="1" android:text="START"
+            android:textSize="12sp" android:textColor="@color/black"
+            android:backgroundTint="@color/alert_green"
+            android:layout_marginEnd="3dp" />
+
+        <Button android:id="@+id/btn_stop"
+            android:layout_width="0dp" android:layout_height="40dp"
+            android:layout_weight="1" android:text="STOP"
+            android:textSize="12sp" android:textColor="@color/white_text"
+            android:backgroundTint="@color/alert_red"
+            android:layout_marginStart="3dp" android:layout_marginEnd="3dp" />
+
+        <Button android:id="@+id/btn_refresh"
+            android:layout_width="0dp" android:layout_height="40dp"
+            android:layout_weight="1" android:text="REFRESH"
+            android:textSize="12sp" android:textColor="@color/black"
+            android:backgroundTint="@color/accent_gold"
+            android:layout_marginStart="3dp" android:layout_marginEnd="3dp" />
+
+        <Button android:id="@+id/btn_dismiss"
+            android:layout_width="0dp" android:layout_height="40dp"
+            android:layout_weight="1" android:text="CLOSE"
+            android:textSize="12sp" android:textColor="@color/white_text"
+            android:backgroundTint="@color/deep_purple"
+            android:layout_marginStart="3dp" />
+    </LinearLayout>
+
+    <!-- ═══ Divider ═══ -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/sakura_pink"
+        android:alpha="0.6"
+        android:layout_marginBottom="12dp" />
+
+    <!-- ═══ ADD ANIME section ═══ -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADD ANIME"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:textColor="@color/sakura_pink"
+        android:letterSpacing="0.15"
+        android:layout_marginBottom="6dp" />
+
+    <!-- Search row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="6dp">
+
+        <EditText
+            android:id="@+id/search_input"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:hint="Search anime name…"
+            android:textSize="14sp"
+            android:textColor="@color/white_text"
+            android:textColorHint="@color/gray_700"
+            android:backgroundTint="@color/neon_cyan"
+            android:paddingStart="12dp"
+            android:paddingEnd="8dp"
+            android:singleLine="true"
+            android:inputType="text"
+            android:layout_marginEnd="6dp" />
+
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="SEARCH"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/neon_cyan" />
+    </LinearLayout>
+
+    <!-- Search results -->
+    <TextView
+        android:id="@+id/search_results"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="12sp"
+        android:textColor="@color/white_text"
+        android:alpha="0.8"
+        android:lineSpacingExtra="4dp"
+        android:layout_marginBottom="12dp" />
+
+    <!-- ═══ Divider ═══ -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/neon_magenta"
+        android:alpha="0.4"
+        android:layout_marginBottom="12dp" />
+
+    <!-- ═══ MY WATCHLIST section ═══ -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MY WATCHLIST"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:textColor="@color/neon_cyan"
+        android:letterSpacing="0.15"
+        android:layout_marginBottom="6dp" />
+
+    <TextView
+        android:id="@+id/watchlist_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Empty — search and add anime above"
+        android:textSize="13sp"
+        android:textColor="@color/white_text"
+        android:alpha="0.6"
+        android:lineSpacingExtra="6dp"
+        android:layout_marginBottom="12dp" />
+
+    <!-- ═══ Divider ═══ -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/neon_magenta"
+        android:alpha="0.4"
+        android:layout_marginBottom="12dp" />
+
+    <!-- ═══ ALERT HISTORY ═══ -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ALERT HISTORY"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:textColor="@color/accent_gold"
+        android:letterSpacing="0.15"
+        android:layout_marginBottom="6dp" />
+
+    <TextView
+        android:id="@+id/alert_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No alerts yet"
+        android:textSize="13sp"
+        android:textColor="@color/white_text"
+        android:alpha="0.6"
+        android:lineSpacingExtra="6dp"
+        android:layout_marginBottom="16dp" />
+
+</LinearLayout>
+</ScrollView>
