@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OverlayBot</string>
+    <string name="channel_name">Anime New Episode Alerts</string>
+    <string name="channel_desc">Fetches anime data from AniList and shows overlay alerts</string>
+    <string name="btn_start">START</string>
+    <string name="btn_stop">STOP</string>
+    <string name="btn_refresh">REFRESH</string>
+    <string name="btn_dismiss">CLOSE</string>
+    <string name="status_inactive">Tracking: OFF</string>
+    <string name="status_active">Tracking: LIVE</string>
+    <string name="status_fetching">Fetching schedule\u2026</string>
+
+    <!-- Overlay strings -->
+    <string name="alert_title">NEW EPISODE!</string>
+    <string name="alert_tag_default">NEW</string>
+    <string name="alert_ep_prefix">EP </string>
+    <string name="alert_airing">AIRING</string>
+    <string name="alert_subbed">SUB</string>
+    <string name="alert_action_watch">WATCH</string>
+    <string name="alert_action_dismiss">LATER</string>
+    <string name="alert_no_data">Schedule data unavailable</string>
+</resources>
