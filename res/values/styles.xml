@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="@android:style/Theme.DeviceDefault">
+        <item name="android:windowBackground">@color/dark_bg</item>
+        <item name="android:statusBarColor">@color/deep_purple</item>
+        <item name="android:navigationBarColor">@color/deep_purple</item>
+        <item name="android:colorPrimary">@color/neon_cyan</item>
+        <item name="android:colorAccent">@color/sakura_pink</item>
+    </style>
+</resources>
