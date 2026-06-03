@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="sakura_pink">#FFFF6B9D</color>
+    <color name="neon_cyan">#FF00F5FF</color>
+    <color name="neon_magenta">#FFFF00FF</color>
+    <color name="deep_purple">#FF1A0033</color>
+    <color name="dark_bg">#FF0D0D1A</color>
+    <color name="card_bg">#CC1A1A2E</color>
+    <color name="white_text">#FFF0F0FF</color>
+    <color name="accent_gold">#FFFFD700</color>
+    <color name="alert_red">#FFFF2244</color>
+    <color name="alert_green">#FF00FF88</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gray_500">#FF9E9E9E</color>
+    <color name="gray_700">#FF616161</color>
+</resources>
